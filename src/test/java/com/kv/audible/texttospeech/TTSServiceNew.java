@@ -12,17 +12,9 @@ public class TTSServiceNew {
 
   private static String ttsServiceUri = "https://westus.tts.speech.microsoft.com/cognitiveservices/v1";
 
-  /**
-   * Synthesize the voice through the specified parameters.
-   */
   public static byte[] Synthesize(String textToSynthesize, String outputFormat, String locale, String genderName, String voiceName) throws Exception {
 
-    // Note: new unified SpeechService API key and issue token uri is per region
-    // New unified SpeechService key
-    // Free: https://azure.microsoft.com/en-us/try/cognitive-services/?api=speech-services
-    // Paid: https://go.microsoft.com/fwlink/?LinkId=872236
-
-    Authentication auth = new Authentication( Constants.KEY1 );
+    Authentication auth = new Authentication(Constants.KEY2);
     String accessToken = auth.GetAccessToken();
 
     HttpsURLConnection webRequest = HttpsConnection.getHttpsConnection(ttsServiceUri);

@@ -36,7 +36,7 @@ public class Authentication
       }
     };
 
-    accessTokenRenewer.schedule(nineMinitesTask, 0, RefreshTokenDuration);
+    //accessTokenRenewer.schedule(nineMinitesTask, 0, RefreshTokenDuration);
   }
 
   public String GetAccessToken()
